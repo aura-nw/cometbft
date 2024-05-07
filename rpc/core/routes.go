@@ -14,12 +14,12 @@ var Routes = map[string]*rpc.RPCFunc{
 	"unsubscribe_all": rpc.NewWSRPCFunc(UnsubscribeAll, ""),
 
 	// info API
-	"health":               rpc.NewRPCFunc(Health, ""),
-	"status":               rpc.NewRPCFunc(Status, ""),
-	"net_info":             rpc.NewRPCFunc(NetInfo, ""),
-	"blockchain":           rpc.NewRPCFunc(BlockchainInfo, "minHeight,maxHeight", rpc.Cacheable()),
-	"genesis":              rpc.NewRPCFunc(Genesis, "", rpc.Cacheable()),
-	"genesis_chunked":      rpc.NewRPCFunc(GenesisChunked, "chunk", rpc.Cacheable()),
+	"health":     rpc.NewRPCFunc(Health, ""),
+	"status":     rpc.NewRPCFunc(Status, ""),
+	"net_info":   rpc.NewRPCFunc(NetInfo, ""),
+	"blockchain": rpc.NewRPCFunc(BlockchainInfo, "minHeight,maxHeight", rpc.Cacheable()),
+	// "genesis":              rpc.NewRPCFunc(Genesis, "", rpc.Cacheable()),
+	// "genesis_chunked":      rpc.NewRPCFunc(GenesisChunked, "chunk", rpc.Cacheable()),
 	"block":                rpc.NewRPCFunc(Block, "height", rpc.Cacheable("height")),
 	"block_by_hash":        rpc.NewRPCFunc(BlockByHash, "hash", rpc.Cacheable()),
 	"block_results":        rpc.NewRPCFunc(BlockResults, "height", rpc.Cacheable("height")),
