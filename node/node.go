@@ -1244,8 +1244,9 @@ func (n *Node) ConfigureRPC() error {
 		P2PPeers:       n.sw,
 		P2PTransport:   n,
 
-		PubKey:           pubKey,
-		GenDoc:           n.genesisDoc,
+		PubKey: pubKey,
+		// GenDoc:           n.genesisDoc,
+		GenDoc:           nil,
 		TxIndexer:        n.txIndexer,
 		BlockIndexer:     n.blockIndexer,
 		ConsensusReactor: n.consensusReactor,
